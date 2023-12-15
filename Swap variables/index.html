@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variable Swapping</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="margin-left: 2%;">
+
+  <h1>Swap Two Variables</h1>
+
+  <label for="variableA">Variable 1:</label>
+  <input type="text" id="variableA" value="50"><br><br>
+
+  <label for="variableB">Variable 2:</label>
+  <input type="text" id="variableB" value="30"><br><br>
+
+  <button onclick="swapVariables()">Swap</button>
+
+  <p id="initial"></p>
+  <p id="result"></p>
+
+  <script>
+  
+    function swapVariables() {
+
+      var a = document.getElementById('variableA').value;
+      var b = document.getElementById('variableB').value;
+
+      console.log('Before swapping: a = ' + a + ', b = ' + b);
+
+      var temp = a;
+      a = b;
+      b = temp;
+    
+      console.log('After swapping: a = ' + a + ', b = ' + b);
+    
+      document.getElementById('initial').innerHTML = 'Before swapping: Variable 1 = ' + b + ', Variable 2 = ' + a;
+      document.getElementById('result').innerHTML = 'After swapping: Variable 1 = ' + a + ', Variable 2 = ' + b;
+    }
+  </script>
+</body>
+</html>
